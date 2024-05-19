@@ -1,0 +1,276 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Pacifico&family=Questrial&display=swap');
+
+/* Custom Font Styles */
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.questrial-regular {
+  font-family: "Questrial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.introNote p {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+/* Global Styles */
+body {
+  background-color: bisque;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Preloader Styles */
+.preloader {
+  background: linear-gradient(to right, #000000, #3b3b3b);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preloader.fade-out {
+  transition: opacity 2s ease-in-out;
+}
+
+.brand-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.brand-logo img {
+  width: 20%;
+}
+
+.brand-logo h1 {
+  font-size: 5vw;
+  color: #ffffff;
+  z-index: 9999;
+}
+
+/* Pet Profile and Pet Card Styles */
+.pet-profile,
+.pet-card {
+  background: url(media/petCardBg.png);
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  /* Use percentage for responsiveness */
+  max-width: 600px;
+  /* Maximum width */
+  height: auto;
+  /* Adjust height to maintain aspect ratio */
+}
+
+.pet-card img {
+  width: 100%;
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.pet-profile img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.pet-card img {
+  aspect-ratio: 4/3;
+}
+
+.pet-profile h2,
+.pet-card h1 {
+  font-family: "Pacifico", cursive;
+}
+
+.pet-profile p,
+.pet-card p {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.pet-card p {
+  font-size: 16px;
+}
+
+.pet-note {
+  margin-top: 8vh;
+  font-size: 20px;
+}
+
+/* .pet-card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} */
+
+.pet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Styles */
+.gallery-title {
+  text-align: center;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  gap: 15px;
+}
+
+.gallery-image,
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.gallery-image {
+  height: auto;
+}
+
+.carousel-item img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+}
+
+#hoverDropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Intro Section */
+.intro {
+  background: linear-gradient(to bottom, #808080, #ffffff);
+  padding: 30px;
+}
+
+.introNote {
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .introNote p {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 767px) {
+  .introNote p {
+    font-size: 1em;
+  }
+
+  .pet-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 6/4;
+    border-radius: 10px;
+  }
+}
+
+/* Cards Section */
+.cards-section {
+  padding: 50px 0;
+}
+
+.card {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.card-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+
+  .pet-profile,
+  .pet-card {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .pet-profile,
+  .pet-card {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .pet-profile,
+  .pet-card {
+    max-width: 100%;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .pet-profile,
+  .pet-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+}

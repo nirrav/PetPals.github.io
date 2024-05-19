@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer | Animal Adoption</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="png" href="media/tabIcon.png">
+    <style>
+        /* CSS styles here */
+        body {
+            font-family: "Nunito Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+            /* Set a light background color */
+        }
+
+        header {
+            background-color: #f8d8cd;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #e39486;
+            /* Add a border to separate header */
+        }
+
+        header h1 {
+            margin: 0;
+            /* Remove default margin for h1 */
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            /* Position the main content relatively */
+        }
+
+        .volunteer-info {
+            text-align: center;
+            margin-bottom: 40px;
+            /* Add some space between sections */
+            font-size: 18px;
+            /* Set a default font size */
+        }
+
+        .volunteer-info img {
+            max-width: 100%;
+            margin-top: 10px;
+            border-radius: 8px;
+            /* Add a border radius to the image */
+        }
+
+        .volunteer-form-container {
+            position: relative;
+            width: 100%;
+            max-width: 45vw;
+            /* Increase the maximum width of the form */
+            margin-top: 5%;
+            /* Adjust the margin to move the form down */
+        }
+
+        .volunteer-form {
+            background-color: #fff;
+            padding: 5%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .volunteer-form h2 {
+            margin-top: 0;
+            /* Remove default margin for h2 */
+            text-align: center;
+        }
+
+        .volunteer-form label,
+        .volunteer-form input,
+        .volunteer-form textarea,
+        .volunteer-form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .volunteer-form input,
+        .volunteer-form textarea,
+        .volunteer-form button {
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .volunteer-form button {
+            background-color: #e39486;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .volunteer-form button:hover {
+            background-color: #d3786d;
+        }
+
+        footer {
+            background-color: #f8d8cd;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid #e39486;
+            /* Add a border to separate footer */
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .paw-image {
+            position: absolute;
+            top: -180px;
+            /* Adjust the top position to move the image up */
+            right: 50%;
+            transform: translateX(50%);
+            z-index: 1;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .volunteer-form-container {
+                max-width: 90vw;
+                /* Adjust maximum width for smaller screens */
+            }
+
+            .paw-image {
+                height: auto;
+                width: 100%;
+                top: -80px;
+
+            }
+        }
+
+        @media (max-width: 576px) {
+            .volunteer-form-container {
+                max-width: 90vw;
+                /* Adjust maximum width for even smaller screens */
+            }
+
+            .paw-image {
+                height: auto;
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="media/navIcon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                PetPals
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown" id="hoverDropdown">
+                        <a class="nav-link dropdown-toggle" href="volunteer.html" role="button" aria-expanded="false">
+                            How can you help us?
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="volunteer.html">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="#">Donate</a></li>
+                            <li><a class="dropdown-item" href="#">Sponsor a Meal</a></li>
+                            <li><a class="dropdown-item" href="petCards.html">Adopt</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="btn btn-outline-light" href="petCards.html">Furever Home</a>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Volunteer to Help Animals</h1>
+    </header>
+
+    <main>
+        <section class="volunteer-info">
+            <h2>Why Volunteer?</h2>
+            <p><b>Volunteering with us is a rewarding experience. You can make a real difference in the lives of animals
+                    in
+                    need.</b></p>
+        </section>
+
+        <!-- Container for the form and the paw image -->
+        <div class="volunteer-form-container">
+            <!-- Paw image -->
+            <img src="media/section1bg-removebg-preview.png" alt="Volunteer" class="paw-image">
+
+            <!-- Volunteer form -->
+            <section class="volunteer-form">
+                <h2>Volunteer Sign-up</h2>
+                <form id="volunteerForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us how you can volunteer to help these animals..."></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Animal Adoption. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript code here
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('volunteerForm');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // You can add your code here to handle form submission, such as sending data to a server
+                // For now, let's just log the form data
+                const formData = new FormData(form);
+                for (let [key, value] of formData.entries()) {
+                    console.log(`${key}: ${value}`);
+                }
+
+                // Reset the form after submission
+                form.reset();
+            });
+        });
+        // Toggle dropdown menu when dropdown toggle button is clicked
+        document.querySelector('#hoverDropdown .dropdown-toggle').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent default link behavior
+            var dropdownMenu = document.querySelector('#hoverDropdown .dropdown-menu');
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown menu when clicking outside of it
+        document.addEventListener('click', function (e) {
+            var dropdownMenu = document.querySelector('#hoverDropdown .dropdown-menu');
+            if (!e.target.closest('#hoverDropdown') && dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+
+        // Prevent dropdown menu from closing when clicking on it
+        document.querySelector('#hoverDropdown .dropdown-menu').addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+
+    </script>
+</body>
+
+</html>
